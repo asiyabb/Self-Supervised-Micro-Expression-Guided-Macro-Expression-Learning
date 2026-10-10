@@ -67,31 +67,3 @@ Linear probing evaluation on the held-out test subjects yielded the following ag
 | **Proposed Method (Micro-Guided)** | **$68.9\%$**<br> | **$0.69$**<br> | Steady convergence ($8.21 \rightarrow 0.50$) |
 
 * **Scientific Conclusion:** The performance boost demonstrated by the Proposed Method ($68.9\%$ accuracy) confirms that auxiliary unlabeled micro-expression dynamics successfully transfer fine-grained temporal clues into macro-expression feature spaces.
-
-
-
----
-
-## 5. Execution Guide
-
-### Prerequisites & Dependencies
-
-Ensure you have PyTorch, torchvision, scikit-learn, pandas, matplotlib, seaborn, and openpyxl installed within your virtual environment.
-
-### Running Training & Evaluation
-
-Execute the centralized training script to run all three experimental configurations, optimize via contrastive loss, save best checkpoints, and perform linear probing:
-
-```bash
-PYTHONPATH=src python src/training/train_evaluate.py
-
-```
-
-### Generating Visualization Artifacts
-
-Generate loss convergence curves, performance summary comparisons, and normalized recall confusion matrices inside the `results/` folder:
-
-```bash
-PYTHONPATH=src python src/training/visualize_analysis.py
-
-```
